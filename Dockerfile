@@ -1,4 +1,4 @@
-FROM debian:buster-slim AS buildstage
+FROM --platform=$BUILDPLATFORM debian:buster-slim AS buildstage
 
 ENV ZEROTIER_VERSION=1.4.6
 RUN apt-get update && apt-get install -y curl gnupg && \
